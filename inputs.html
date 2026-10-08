@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="screen"></div>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <button onclick="add()">+</button>
+    <button onclick="subtraction()">-</button>
+    
+</body>
+<script>
+
+// Task 1: Convert collected input value to number. 
+// Task 2: Multiply the converted number by 2 and save it to a variable name "total"
+// Task 3: log that variable to the console
+
+function add() {
+
+     let inputField1 = document.getElementById("input1"); 
+     let inputField2 = document.getElementById("input2"); 
+
+     let outputField =  document.getElementById("screen"); 
+
+     let inputValue1 = +(inputField1.value);
+     let inputValue2 = +(inputField2.value);
+
+     let total = inputValue1 + inputValue2;
+
+    outputField.innerHTML = total;
+
+ }
+function subtraction() {
+
+     let inputField1 = document.getElementById("input1"); 
+     let inputField2 = document.getElementById("input2"); 
+
+     let outputField =  document.getElementById("screen"); 
+
+     let inputValue1 = +(inputField1.value);
+     let inputValue2 = +(inputField2.value);
+
+     let total = inputValue1 - inputValue2;
+
+    outputField.innerHTML = total;
+
+ }
+
+</script>
+</html>
