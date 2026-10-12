@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+        .calc {
+            background-color: white;
+            padding: 1em;
+            width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            .screen {
+                background-color: silver;
+                padding: 1em;
+                .input {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 10px;
+                    gap: 2px;
+                    background-color: rgb(172, 172, 172);
+                    input{
+                        outline: none;
+                        width: 100%;
+                        border: none;
+                    }
+                    #operator:not(:empty) {
+                        width: 44px;
+                        height: 20px;
+                        background-color: #3c2c4c;
+                        color: white;
+                        padding: 2px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+            .buttons {
+                button {
+                    width: 40px; 
+                    height: 30px
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="calc">
+        <div class="screen">
+            <div class="input">
+                <input type="text" id="num1">
+                <div id="operator"></div>
+                <input type="text" id="num2">
+            </div>
+            <div class="output" id="output">0</div>
+        </div>
+        <div class="buttons">
+            <button onclick="add()">+</button>
+            <button onclick="subtract()">-</button>
+            <button onclick="multiply()">*</button>
+            <button onclick="divide()">/</button>
+            <button onclick="modularize()">%</button>
+        </div>
+    </div>
+
+</body>
+<script>
+
+    let numField1 = document.getElementById('num1');
+    let numField2 = document.getElementById('num2');
+
+    let outputField = document.getElementById('output');
+    let operator = document.getElementById('operator');
+
+    function add(){
+
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 + num2;
+
+        outputField.innerHTML = ' = ' + total
+
+        operator.innerHTML = " + "
+        
+
+    }
+
+    function subtract(){
+
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 - num2;
+
+        outputField.innerHTML = ' = ' + total
+
+        operator.innerHTML = " - "
+        
+
+    }
+
+    function multiply(){
+
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 * num2;
+
+        outputField.innerHTML = ' = ' + total
+
+        operator.innerHTML = " x "
+
+    }
+
+    function divide(){
+
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 / num2;
+
+        outputField.innerHTML = ' = ' + total
+
+        operator.innerHTML = " / "
+
+    }
+
+    function modularize(){
+
+        let num1 = +numField1.value
+        let num2 = +numField2.value
+
+        let total = num1 % num2;
+
+        outputField.innerHTML = ' = ' + total
+
+        operator.innerHTML = " % "
+
+    }
+
+</script>
+</html>
