@@ -27,12 +27,77 @@
 
     let num3 = 123.9999
 
-    console.log(Math.floor(num3));
+    console.log(Math.floor(num3)); // 123
 
 
-    let num4 = 123.00000000
+    let num4 = 123.000000001
     
-    console.log(Math.ceil(num4));
+    console.log(Math.ceil(num4)); // 124
+
+    let num5 = 123.4;
+
+    console.log(Math.round(num5));
+
+
+    let randomNumber = Math.random() 
+    //Multiply  ( 0 - 0.99999 ) * 2  => 0 - 1.9999
+    //Addition  ( 0 - 0.99999 ) + 2  => 2 - 2.9999
+
+    // console.log(Math.ceil(Math.random())); // 0, 1
+
+    console.log(randomNumber);
+
+    let range1 = randomNumber * 2 // 0 * 1.9999
+
+    let range2 = randomNumber * 3 // 0 * 2.9999
+
+    let range3 = randomNumber * 5 // 0 * 4.9999
+
+    // console.log(range1, range2, range3);
+
+    // Task : Generate a number from 0 - 5
+
+    let zeroTo5 = Math.ceil(Math.random() * 5) // 0 - 5
+
+    console.log(zeroTo5);
+
+    // Task : To generate a number from 1 - 10 using Math.ceil()
+
+    let oneTo10 = Math.random() * 9 // 0 - 8.999 
+    oneTo10 = Math.ceil(oneTo10) // 0 - 9
+    oneTo10 =  oneTo10 + 1 // 1 - 10
+
+    //Task Generate a number from 1 - 10 using Math.floor()
+    
+    let oneeTo10 = Math.random() * 10 // 0 - 9.999 
+    oneeTo10 = Math.floor(oneTo10) // 0 - 9
+    oneeTo10 =  oneTo10 + 1 // 1 - 10
+
+
+    // Task: To generate a number from 2 - 5 using Math.ceil
+    let twoTo5 = Math.random() * 3 // 0 - 2.999 
+    twoTo5 = Math.ceil(twoTo5) // 0 - 3
+    twoTo5 =  twoTo5 + 2 // 2 - 5
+
+
+
+    let sevenTo15 = (Math.random() * 9)// 0 - 8.999
+
+    sevenTo15 = Math.floor(sevenTo15)// 0 - 8
+
+    sevenTo15 += 7 
+
+    console.log(sevenTo15);
+
+
+    let twentyTo30 = (Math.random() * 11) // 0 - .9999
+
+    twentyTo30 = Math.ceil(twentyTo30)// 0 - 10; 
+
+    twentyTo30 = twentyTo30 + 20; 
+    
+    
+    
     
 </script>
 </html>
