@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    
+//    - - indexOf
+
+
+let  sentence1 = 'dictionaries';
+
+console.log(sentence1.indexOf('on')); // 5
+console.log(sentence1.indexOf('i')); // 1
+console.log(sentence1.indexOf('p')); // -1
+
+console.log(sentence1.indexOf('one')); // -1
+console.log(sentence1.indexOf('ona')); // 5
+
+let sentence2 = 'I have a book';
+
+console.log(sentence2.indexOf('a b')); // 
+
+// --  lastIndexOf
+console.log(sentence1.lastIndexOf('i')); // 9
+
+let sentence3 = 'dictate'; 
+
+console.log(sentence3.indexOf('i')); // 
+console.log(sentence3.lastIndexOf('i')); // 
+
+// toUpperCase 
+let upperCaseWord = sentence1.toUpperCase()
+
+console.log(upperCaseWord); // DICTIONARIES
+
+// toLowerCase
+console.log(upperCaseWord.toLowerCase()); // dictionaries
+
+// startsWith
+// let  sentence1 = 'dictionaries';
+console.log('dictionaries startsWith diction :', sentence1.startsWith('diction')); // true
+console.log('dictionaries startsWith dicta :', sentence1.startsWith('dicta')); // false
+console.log('dictionaries startsWith dict :', sentence1.startsWith('dict')); // true
+
+// endsWith
+console.log('dictionaries ends with ies: ', sentence1.endsWith('ies')); // true
+console.log('dictionaries ends with sies: ', sentence1.endsWith('sies')); // false
+
+//  includes() 
+console.log('dictionaries'.includes('ari')); // true
+console.log('dictionaries for me'.includes('r m')); // true
+console.log('dictionaries for me'.includes('rm')); // false
+
+console.log('dictionaries for me'.includes('Nari')); // false 
+console.log('dictioNaries for me'.toLowerCase().includes('nari')); // true
+
+
+// split() 
+// let sentence2 = 'I have a book';
+
+console.log(sentence2.split());
+console.log(sentence2.split(' '));
+console.log(sentence2.split('av')); // ['I h', 'e a book']
+
+// Task: convert only the word dictionary in this sentence to an upper case using either substr, substring or slice.
+let sentence5 = 'I have a dictionary given to me by my mother.';   
+
+// let  sentence1 = 'dictionaries';
+console.log(sentence1.split(''))
+console.log(sentence5.split(''))
+console.log(sentence5.split(' dictionary '))
+
+// substring  (index, length)
+console.log(sentence1.substring(4, 7)); // ion
+
+// let sentence2 = 'I have a book';
+console.log(sentence2.substring(2, 9)); // 'have a '
+console.log(sentence1.substring(4, 5)); // 'i'
+
+console.log(sentence1.substring(4, -200)); // 'dict --- negative lookback'
+
+// substr (index, number of chars)
+// let  sentence1 = 'dictionaries';
+console.log(sentence1.substr(4)); // 'ionaries'
+console.log(sentence1.substr(4, 0)); // ''
+console.log(sentence1.substr(4, 4)); // 'iona'
+console.log(sentence1.substr(-4)); // 'ries'
+console.log(sentence1.substr(-4, 2)); // 'ri'
+
+
+console.log(sentence1.slice(4, 5)); // 'i' 
+console.log(sentence1.slice(-4)); // 'i' 
+console.log(sentence1.slice(4, 5)); // 'i' 
+
+// replace, replaceAll() 
+
+let ourString = 'I have a new book that was given to me by my friend. The book is interesting'; 
+
+console.log(ourString.replace('book', 'big novel').replace('book', 'new book'));
+console.log(ourString.replaceAll('book', 'big novel'));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
