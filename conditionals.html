@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="inputField">
+    <button onclick="check()">Add 2</button>
+    
+</body>
+</html>
+<script>
+
+    // console.log((4 > 3) || (5 > 10)); // true
+    // console.log((4 < 3) || (5 > 10)); // false
+
+    // console.log((4 > 3) && (5 > 10)); // false
+    // console.log((4 > 3) || (5 < 10)); // true
+
+    // if, else, while, switch, for,
+
+    let num1 = 4
+    let num2 = 3
+
+    if (num1 > num2) {
+        console.log('4 is greater than 3');
+    }
+
+    if (num1 < num2) {
+        console.log('3 is greater than 4');
+    }
+
+    // if(!true) {
+    //     console.log('This is false')
+    // }else{
+    //     console.log('This is true')
+    // }
+
+
+    function check() {
+
+        let inputField = document.getElementById('inputField')
+        let inputValue = inputField.value.trim(); 
+
+        if(!inputValue){
+            alert('Please enter a valid input')
+        }else{
+
+
+            if(inputValue === 'ade'){
+                alert('Welcome, mr ade')
+            }else if (inputValue === 'admin'){ 
+                alert('Welcome, admin')
+            }else{
+                alert('Welcome, user')
+            }
+
+        }
+
+    }
+
+    // function check() {
+
+    //     let inputField = document.getElementById('inputField')
+    //     let inputValue = inputField.value.trim(); 
+
+    //     if(!inputValue){
+    //         alert('Please enter a valid input')
+    //     }
+
+    //     if(inputValue){
+
+    //         // inputValue = +inputValue; // convert to number  'abc'
+
+    //         // Math.isNaN(NaN) // true
+    //         // isNaN(+'abc') // true
+    //         // isNaN(+'123') // false
+
+    //         let isNotValidNumber = isNaN(inputValue)
+
+    //         if(isNotValidNumber){
+    //             alert('This is not a valid number')
+    //         }
+
+    //         if(!isNotValidNumber){
+    //             alert('This is a valid number')
+    //              inputValue = +inputValue; 
+    //             let total = inputValue + 2;
+    //         }
+
+    //     }
+
+    // }
+
+</script>

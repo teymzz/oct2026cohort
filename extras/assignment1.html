@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+</html>
+
+<script>
+
+    // slice, substr, substring, toUpperCase, toLowerCase, split, index, indexOf, charCodeAt, startsWith, endsWith, trim, trimStart, trimEnd, trim, replace, search, match 
+
+    let sentence = 'I have a dictionary given to me by my mother.'
+
+    // with slice 
+    let sentenceStart = sentence.slice(0, 9); //  'I have a '
+
+    let sentenceWord = sentence.slice(9, 19).toUpperCase() // 'DICTIONARY'
+
+    let sentenceEnd = sentence.slice(19); // ' given to me by my mother.' 
+
+    let finalSentence =  sentenceStart + sentenceWord + sentenceEnd
+
+    console.log(finalSentence);
+
+    // console.log(sentence.indexOf('dictionary'));
+    
+    // let sentenceWord =  sentence.slice();
+
+
+
+    // console.log(sentence.startsWith('I have')); // true
+    // console.log(sentence.startsWith('I Have')); // false
+    // console.log(sentence.endWith('mother.')); // true
+    // console.log(sentence.endWith('mother')); // false
+    
+
+
+</script>
