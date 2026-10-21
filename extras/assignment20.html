@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="month">
+    <button onclick="checkSeason()">Check  season</button>
+    <output id="output"></output>
+    
+</body>
+
+</html>
+
+<script>
+
+function checkSeason() {
+
+    /// DeCemBEr // december
+
+ let monthInput = month.value.trim()
+ let monthValue = monthInput.toLowerCase(); 
+
+ if(monthValue){
+
+    if(monthValue === 'september' || monthValue === 'october' || monthValue === 'november'){
+        output.innerHTML = monthInput+' is Autumn'
+    }else if(monthValue === 'december' || monthValue === 'january' || monthValue === 'february'){
+        output.innerHTML = monthInput+' is Winter'
+    }else if(monthValue === 'march' || monthValue === 'april' || monthValue === 'may'){
+        output.innerHTML = monthInput+' is Spring'
+    }else if(monthValue === 'june' || monthValue === 'july' || monthValue === 'august'){
+        output.innerHTML = monthValue+'Seaon is Summer'
+    }else{
+        output.innerHTML = `"${monthInput} is not a valid month"`
+    }
+
+ }else{
+    alert('Please supply enter a valid input')
+ }
+
+}
+
+// let month = document.getElementById('month')
+// console.log(month);
+
+
+//     # Assignment [date 20-10-2026]
+
+// 1. Create an input field that checks if the season is Autumn, Winter, Spring or Summer. 
+//    - If the user input is : September, October or November, the season is Autumn.
+//    - If the user input is : December, January or February, the season is Winter.
+//    - If the user input is : March, April or May, the season is Spring
+//    - If the user input is : June, July or August, the season is Summer
+</script>

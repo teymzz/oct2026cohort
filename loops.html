@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+<input type="text" id="inputA" placeholder="Input A">
+<input type="text" id="inputB" placeholder="Input B">
+ <button onclick="checkInput()">Verify Input</button>
+ <output id="output"></output>
+</body>
+</html>
+<script>
+    //   > Exercise:
+    //   - - create two input fields A and B, 
+    //   - - if input A is not filled : "Please input value A"
+    //   - - if input B is not filled : "Please input value B"
+    //   - - if input A is greater than B display message : "Value A is greater than B"
+    //   - - if input A is lesser than B display message : "Value A is lesser than B"
+
+let inputA = document.getElementById("inputA")
+let inputB = document.getElementById("inputB")
+
+function checkInput(){
+    let inputValueA = inputA.value.trim();
+    let inputValueB = inputB.value.trim();
+    if( isNaN(inputValueA) ){
+        alert("Please enter a valid input in Field A")
+       
+    }
+    else if 
+     ( isNaN(inputValueB) ){
+         alert("Please enter a valid input in Field B")
+     }
+}
+</script>
