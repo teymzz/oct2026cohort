@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input id="weight" placeholder="weight(kg)">
+    <input id="height" placeholder="height(m)">
+    <button onclick="calculateBMI()">Calculate BMI</button>
+    
+</body>
+</html>
+<script>
+
+    function calculateBMI() {
+
+        let weightValue, heightValue;
+
+        weightValue = weight.value.trim();
+        heightValue = height.value.trim()
+
+        if(isNaN(weightValue)){
+            alert('Please enter a valid weight')
+        }else if(isNaN(heightValue)){
+            alert('Please enter a valid height')
+        }else{
+
+            weightValue = +weightValue
+            heightValue = +heightValue
+
+            // // bmi = weight in Kg / (height x height)
+            let bmi = weightValue  / (heightValue * heightValue);
+            bmi = bmi.toFixed(1);
+
+            let prefix = `BMI of ${bmi} is `;
+
+            if(bmi < 18.5){
+                console.log(`${prefix} is an underweight`);
+            }else if( bmi >= 18.5 && bmi <= 24.9 ){
+                console.log(`${prefix} is a normal weight`);
+            }else if( bmi >= 25 && bmi <= 29.9 ) {
+                console.log(`${prefix} is an overweight`);
+            }else {
+                console.log(`${prefix} is an obese`);
+            }
+
+        }
+
+    }
+
+
+</script>
