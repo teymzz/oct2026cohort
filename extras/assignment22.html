@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="number1">
+    <input type="text" id="number2">
+    <button onclick="generateTimesTable()">Generate Times Table</button>
+
+</body>
+ </html>
+<script>
+
+    // console.log( !true );  // false
+    // console.log( !'' );  // true
+    // console.log( !' ' );  // false
+    
+
+function generateTimesTable(){
+    
+    // First field element and value
+    let startField = document.getElementById('number1')
+    let startValue = startField.value.trim() ;  // 'ade'
+
+    // Second field element and value
+    let stopField = document.getElementById('number2')
+    let stopValue = stopField.value.trim(); // 'bola'
+
+    if( !startValue || !stopValue ){
+        alert('All fields are required.')
+    }else{
+
+        if( isNaN(startValue) ) {
+            alert('Please enter a valid number in the first input field')
+        }else if(  isNaN(stopValue)  ){
+            alert('Please enter a valid number in the second input field')
+        }else{
+            startValue = +startValue // starting point 
+            stopValue = +stopValue // ending
+
+        }
+
+    }
+
+    
+
+}
+
+
+</script>
