@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+ 
+ let array1 = new Array();
+ let array2 = Array();
+ let array3 = [];
+
+//  console.log([] == []);
+console.log(array1, array2, array3);
+
+let array4 = new Array(5);
+console.log(array4);
+
+array4.fill('ade')
+
+console.log(array4);
+
+
+let array6 = [5];
+
+console.log(array6);
+
+
+let array7 = [5, true, 'book', null, 'book', undefined, NaN, [], 'book', Infinity]
+
+console.log(array7);
+console.log(array7.length); // length of an array
+console.log(array7.length - 1); // last index of array
+
+console.log(array7[2]); // book
+
+console.log(array7.indexOf('book')); // 2
+console.log(array7.lastIndexOf('book')); // 8
+
+// let  name = 'ade';
+
+//  console.log(name[1]);
+  
+// console.log(array7.lastIndexOf(Infinity));
+
+// Array Methods
+
+let defaultArray = []; 
+
+defaultArray.push('Ade');
+
+console.log(defaultArray);
+
+defaultArray.push('Kemi')
+
+
+console.log(defaultArray);
+console.log(defaultArray.unshift('Bayo'));
+
+console.log(defaultArray);
+
+defaultArray[1] = defaultArray[1].toUpperCase();
+
+console.log(defaultArray);
+
+
+// Exercise . 
+
+let array = [12.305, '15']; 
+
+array[0]= parseInt(array[0]);
+array[1]= +array[1]
+
+console.log(array);
+;
+
+
+
+
+
+
+
+ 
+
+</script>

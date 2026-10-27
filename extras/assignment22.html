@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .time-tables {
+            padding: 10px;
+            background-color: blue;
+            margin-bottom: 20px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     
     <input type="text" id="number1">
     <input type="text" id="number2">
     <button onclick="generateTimesTable()">Generate Times Table</button>
+
+    <div id="output"></div>
 
 </body>
  </html>
@@ -42,7 +52,29 @@ function generateTimesTable(){
             startValue = +startValue // starting number 
             stopValue = +stopValue // ending number
 
-            // Assigment : Generate a loop from the starting number to the ending number
+            let html = '';
+
+            for(let index = startValue; index <= stopValue; index++){
+                
+                // output.innerHTML += `<h1>${index} times multiplication table</h1>`
+
+                // for(let multiplier = 0; multiplier <= 12; multiplier++){
+                //     output.innerHTML += `${index} * ${multiplier} = ${index * multiplier} <br>`;
+                // }
+
+                // output.innerHTML += '<br>'
+
+                html += `<div class="time-tables"><h1>${index} times multiplication table</h1>`
+
+                for(let multiplier = 0; multiplier <= 12; multiplier++){
+                    html += `${index} * ${multiplier} = ${index * multiplier} <br>`;
+                }
+
+                html += '</div>'
+                                
+            }
+
+            output.innerHTML = html
 
         }
 
