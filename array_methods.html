@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="output"></div>
+    
+</body>
+</html>
+<script>
+    // - toString
+    // - join
+    // - slice
+    // - splice
+    // - pop
+    // - shift
+    // - unshift
+
+    let languages = ['english','french','latin','yoruba','pidgin','chinese','finnish']; 
+
+    let languagesString = languages.toString() // 
+    console.log(languagesString);
+
+    console.log(languagesString.split(','));
+
+    // join
+    console.log(languages.join(' <br> '));
+
+    // - pop & shift
+   let removedValue1 = languages.pop()
+   let removedValue2 = languages.pop()
+    
+    console.log(languages);
+
+    console.log(removedValue1, removedValue2);
+    
+
+    let removedValue3 = languages.shift(); 
+
+    console.log(removedValue3, languages);
+    
+    let languages2 = ['html','javascript','python','rust','php','css']; 
+
+    let copiedItems = languages2.slice(1, 4);
+
+    console.log(copiedItems);
+
+    console.log(languages2);
+
+    // Splice...... 
+// languages2.splice(1, 1) // delete 'javascript' from array
+
+
+languages2.splice(1, 1, 'JAVA','DJANGO') // replace 'javascript' with JAVA
+// languages2.splice(1, 1, 'JAVA')
+
+console.log(languages2);
+
+// Task: In the array below
+    // 1: Remove 'javascript' from the array below
+    // 2: Replace 'php' with c++ and java
+
+    let array = ['html','css','rust','php','javascript','python']
+
+    array.splice(3, 1, 'c++','java');
+    array.splice(5, 1);
+
+    console.log(array);
+
+    for(let i=0; i <= array.length - 1; i++){
+        
+        output.innerHTML += `${array[i]} <br>`
+        // output += array[i] + '<br>'
+        // console.log(array[i]);
+    }
+
+
+    
+
+    
+    
+    
+    
+
+ 
+    
+</script>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-field{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            .color-box{
+                width: 40px;
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="text" id="countField"> <button onclick="generateColors()">Generate random colors</button>
+    
+    <div id="colorField" class="color-field">
+
+    </div>
+
+</body>
+</html>
+<script>
+
+    function generateColors() {
+
+       let count = countField.value.trim();
+
+       console.log(isNaN(count));
+       
+
+       if(!count || isNaN(count)){
+        alert('Please enter a valid number')
+       }else{
+         count = +count;
+
+         let colors = [];
+
+         for(let i = 1; i <= count; i++ ){
+
+            // 0 - 255
+            
+            let rgb1 = Math.ceil(Math.random() * 255)
+            let rgb2 = Math.ceil(Math.random() * 255)
+            let rgb3 = Math.ceil(Math.random() * 255)
+
+            let rgbColor = `rgb(${rgb1}, ${rgb2}, ${rgb3})`
+
+            colorField.innerHTML += `
+            <div class="color-box" style="background-color:${rgbColor}"></div>
+            `
+
+            // colors.push(rgbColor)
+         }
+
+       //  console.log(colors);
+         
+
+       }
+
+    }
+
+
+</script>
